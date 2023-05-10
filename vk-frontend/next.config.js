@@ -4,9 +4,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3000',
+        protocol: 'https',
+        hostname: 'restless-frost-9292.fly.dev',
+        port: '',
         pathname: '/image/**',
       },
     ],
