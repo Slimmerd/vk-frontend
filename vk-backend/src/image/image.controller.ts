@@ -16,6 +16,8 @@ import { diskStorage } from 'multer';
 import { Response } from 'express';
 import * as path from 'path';
 import * as uuid from 'uuid';
+// import { Express } from 'express';
+import "multer";
 
 @Controller('image')
 export class ImageController {

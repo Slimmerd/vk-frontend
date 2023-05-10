@@ -7,12 +7,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
     // allowedHeaders: '*',
-    origin: 'http://localhost:3001',
+    origin: 'https://vk-frontend.vercel.app/',
     credentials: true,
   });
   app.use(cookieParser());
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(3000);
+  await app.listen(process.env.PORT || "8080");
 }
 
 bootstrap();

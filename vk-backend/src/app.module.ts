@@ -19,7 +19,7 @@ import { ImageModule } from './image/image.module';
     FriendsModule,
     UserModule,
     ConversationModule,
-    MsgModule,
+    // MsgModule,
     PrismaModule,
     ImageModule,
   ],
