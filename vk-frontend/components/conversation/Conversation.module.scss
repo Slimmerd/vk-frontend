@@ -1,0 +1,66 @@
+.main {
+  display: flex;
+  background: #F3F4F4;
+  border-radius: 10px;
+
+  padding: 10px 20px;
+  margin-bottom: 10px;
+
+}
+
+.content {
+  width: 100%;
+}
+
+
+.avatar {
+
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 100%;
+
+}
+
+
+.heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.text{
+  margin-bottom: 10px;
+}
+
+.bottom{
+  button {
+    display: flex;
+    background: #B9BBBE ;
+
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    .count {
+      margin-left: 5px;
+    }
+
+    &:active {
+      background: #D5573B;
+    }
+  }
+}

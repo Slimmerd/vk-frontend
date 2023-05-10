@@ -1,0 +1,27 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading, .subHeading{
+}
+
+.subHeading{
+  margin: 10px 0 20px 0;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+
+.card{
+  width: 50%;
+  align-items: center;
+
+  padding: 40px;
+  border-radius: 10px;
+  background: #94C9A9;
+}
+

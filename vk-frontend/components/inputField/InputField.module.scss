@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: white;
+  //background: #F3F4F4;
+}

@@ -1,0 +1,43 @@
+.main {
+  display: inline-block;
+  background-color: #F3F4F4;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 10px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 10ms ease-in-out, border-color 10ms ease-in-out;
+  border: 1px solid transparent;
+
+  &,
+  span {;
+    margin-left: 5px;
+    color: black;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  i,
+  span,
+  path,
+  svg {
+    transition: all 10ms ease-in-out;
+  }
+
+  &:hover {
+    background-color: darken(#7D8CA8, 8%);
+
+    &, span {
+      color: white;
+    }
+  }
+
+  &:active {
+    background-color: darken(#7D8CA8, 12%);
+    transform: translateY(1px);
+  }
+}

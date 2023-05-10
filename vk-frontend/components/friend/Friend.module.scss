@@ -1,0 +1,22 @@
+.main {
+  background: #F3F4F4;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background: white;
+    margin-right: 10px;
+  }
+}
+
+.avatar {
+  background: #fff;
+  border-radius: 100%;
+}

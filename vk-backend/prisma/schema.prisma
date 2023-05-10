@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                Int     @id @default(autoincrement())
+
+  email             String  @unique
+  password          String
+
+  name              String
+  dob               DateTime
+  city              String
+  edu               String?
+
+  posts             Post[]
+  friends           User[]        @relation("Friendship")
+  inverseFriends    User[]       @relation("Friendship")
+
+  liked             Post[]   @relation("Likes")
+  conversations     Conversation[]
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model Post {
+  id            Int         @id @default(autoincrement())
+  content       String
+  attachments   String[]
+  like          User[]      @relation("Likes")
+  date          DateTime    @default(now())
+  author        User        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId      Int
+}
+
+model Conversation {
+  id        Int     @id @default(autoincrement())
+  memebers  User[]
+  messages  Message[]
+}
+
+model Message {
+    id              Int             @id @default(autoincrement())
+    text            String
+    conversation    Conversation    @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+    conversationId  Int
+    authorId        Int
+    date            DateTime        @default(now())
+}
