@@ -25,7 +25,7 @@ export const UserAPI = {
     const res = await instance.get(`/user/byId/${userID}`).catch((err) => {
       console.log("err", err);
       return { data: false };
-    });;
+    });
     return res.data;
   },
 

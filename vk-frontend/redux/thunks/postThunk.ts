@@ -1,5 +1,4 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { removeUser } from "@/redux/userSlice";
 import { PostAPI } from "@/api/postAPI";
 import { CreatePostT } from "@/utils/types/post";
 

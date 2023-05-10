@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import dayjs from "dayjs";
 import "dayjs/locale/ru";
-import { IoPerson } from "react-icons/io5";
 
 const Profile = () => {
   const user = useSelector((state: RootState) => state.user);

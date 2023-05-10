@@ -1,7 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { FriendAPI } from "@/api/friendAPI";
 import { PostAPI } from "@/api/postAPI";
-import { removeUser } from "@/redux/userSlice";
 
 export const addFriend = createAsyncThunk(
   "user/addFriend",

@@ -14,9 +14,6 @@ export const useIsAuth = () => {
   }, []);
 
   useEffect(() => {
-    console.log("feed", user.id);
-    console.log("feed", user.status);
-
     if (user.status === "error" && user.id === -1) {
       router.replace("/auth/login");
     }
@@ -35,7 +32,6 @@ export const useLoginIsAuth = () => {
   }, []);
 
   useEffect(() => {
-    console.log("auth", user.id);
     if (
       user.id !== -1 &&
       (router.pathname === "/auth/login" ||

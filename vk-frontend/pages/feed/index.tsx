@@ -27,7 +27,7 @@ const Feed = () => {
       )}
       {feed.posts.length > 0 &&
         feed.posts.map((post) => (
-          <Post data={post} userID={id} key={post.id} postType={2}/>
+          <Post data={post} userID={id} key={post.id} postType={2} />
         ))}
     </div>
   );
