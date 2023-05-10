@@ -6,8 +6,9 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    // allowedHeaders: '*',
-    origin: 'https://vk-frontend.vercel.app/',
+    allowedHeaders: '*',
+    origin: '*',
+    // origin: 'https://vk-frontend.vercel.app/',
     credentials: true,
   });
   app.use(cookieParser());
