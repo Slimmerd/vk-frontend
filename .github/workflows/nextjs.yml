@@ -30,7 +30,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        working-directory: ./vk-frontend
         uses: actions/checkout@v3
       - name: Detect package manager
         working-directory: ./vk-frontend
@@ -41,13 +40,11 @@ jobs:
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
             exit 0
       - name: Setup Node
-        working-directory: ./vk-frontend
         uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
-        working-directory: ./vk-frontend
         uses: actions/configure-pages@v3
         with:
           # Automatically inject basePath in your Next.js configuration file and disable
@@ -56,7 +53,6 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: Restore cache
-        working-directory: ./vk-frontend
         uses: actions/cache@v3
         with:
           path: |
